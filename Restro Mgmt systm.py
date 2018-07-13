@@ -24,7 +24,6 @@ itm1 = Label(Tops, font=('Arial Bold',30),text="Restaurant Management System",fg
 itm2 = Label(Tops, font=('aria',20),text=localtime,fg='#4682b4').grid(row=1,column=0)
 
 
-#---------------Calculator------------------
 
 def Amt():
     x=random.randint(100,900)
@@ -77,8 +76,6 @@ def Reset():
     cost.set("")
     Cheese_burger.set("")
 
-
-#---------------------------------------------------------------------------------------
 rand = StringVar()
 Fries = StringVar()
 Largefries = StringVar()
@@ -93,7 +90,7 @@ cost = StringVar()
 Cheese_burger = StringVar()
 
 
-#-----------------------------------------------------------------------------------------------
+
 order = Label(f1, font=('Arial Bold',17),text="Order No.",fg='#4682b4').grid(row=0,column=1)
 entryorder = Entry(f1,font=('Arial Bold',15), textvariable=rand , bd=8,insertwidth=2,bg='#b0e0e6',justify='right').grid(row=0,column=2)
 
@@ -113,7 +110,7 @@ entrypizza = Entry(f1,font=('Arial Bold',15), textvariable=Filet , bd=8,insertwi
 Cheeseburger = Label(f1, font=('Arial Bold',17),text="Cheese burger",fg='#4682b4').grid(row=5,column=1)
 entryCheese_burger = Entry(f1,font=('Arial Bold',15), textvariable=Cheese_burger , bd=8,insertwidth=2,bg='#b0e0e6',justify='right').grid(row=5,column=2)
 
-#-----------------------------------------------------------------------------------------
+
 drinks = Label(f1, font=('Arial Bold',17),text="Drinks",fg='#4682b4').grid(row=0,column=3)
 entrydrinks = Entry(f1,font=('Arial Bold',15), textvariable=Drinks , bd=8,insertwidth=2,bg='#b0e0e6',justify='right').grid(row=0,column=4)
 
@@ -133,7 +130,7 @@ Totalamt = Label(f1, font=('Arial Bold',17),text="Total",fg='#4682b4').grid(row=
 entryTotal = Entry(f1,font=('Arial Bold',15), textvariable=Total , bd=8,insertwidth=2,bg='#b0e0e6',justify='right').grid(row=5,column=4)
 
 
-#-----------------------------------------buttons------------------------------------------
+
 
 lblTotal = Label(f1,text="---------------------",fg="white")
 lblTotal.grid(row=6,columnspan=3)
@@ -144,7 +141,7 @@ reset=Button(f1,fg='#070707',font=('Arial Bold',16),width=10,padx=14,pady=7, bd=
 
 exit=Button(f1,fg='#070707',font=('Arial Bold',16),width=10,padx=14,pady=7, bd=8, text="EXIT", bg='#b0e0e6',command=Exit).grid(row=7, column=4)
 
-#--------------------------------------------------------------------------------------------
+
 def Item_cost():
     r = Tk()
 
@@ -164,7 +161,7 @@ def Item_cost():
     itm = Label(r, font=('Arial Bold',14), text="Drinks", fg='#4682b4').grid(row=6, column=0)
     itm = Label(r, font=('Arial Bold',14), text="25", fg='#4682b4').grid(row=6, column=5)
     r.mainloop()
-#----------------------------------------------------------------------------------
+
 price=Button(f1,fg='#070707',font=('Arial Bold',15),width=10,padx=14,pady=7,bd=8, text="PRICE", bg='#b0e0e6',command=Item_cost).grid(row=7, column=0)
 
 
