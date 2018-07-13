@@ -6,8 +6,8 @@ import time
 root = Tk()
 root.title("Restaurant Management System")
 
-Tops = Frame(root,bg="white",width = 1500,height=500)
-Tops.pack(side=TOP)
+Top = Frame(root,bg="white",width = 1500,height=500)
+Top.pack(side=TOP)
 
 fr = Frame(root,width = 850,height=700)
 fr.pack(side=LEFT)
@@ -20,8 +20,8 @@ localtime=time.asctime(time.localtime(time.time()))
 
 
 
-itm1 = Label(Tops, font=('Arial Bold',30),text="Restaurant Management System",fg='#4682b4',bd=10).grid(row=0,column=0)
-itm2 = Label(Tops, font=('aria',20),text=localtime,fg='#4682b4').grid(row=1,column=0)
+itm1 = Label(Top, font=('Arial Bold',30),text="Restaurant Management System",fg='#4682b4',bd=10).grid(row=0,column=0)
+itm2 = Label(Top, font=('aria',20),text=localtime,fg='#4682b4').grid(row=1,column=0)
 
 
 
@@ -45,9 +45,9 @@ def Amt():
     costofdrinks = codr*25
 
     costofmeal = "Rs.",str('%.2f'% (costoffries +  costoflargefries + costofburger + costoffilet + costofcheeseburger + costofdrinks))
-    PayTax=((costoffries +  costoflargefries + costofburger + costoffilet +  costofcheeseburger + costofdrinks)*0.33)
+    PayTax=((costoffries +  costoflargefries + costofburger + costoffilet +  costofcheeseburger + costofdrinks)*0.99)
     Totalcost=(costoffries +  costoflargefries + costofburger + costoffilet  + costofcheeseburger + costofdrinks)
-    Ser_Charge=((costoffries +  costoflargefries + costofburger + costoffilet + costofcheeseburger + costofdrinks)/99)
+    Ser_Charge=((costoffries +  costoflargefries + costofburger + costoffilet + costofcheeseburger + costofdrinks)/96)
     Service="Rs.",str('%.2f'% Ser_Charge)
     OverAllCost="Rs.",str( PayTax + Totalcost + Ser_Charge)
     PaidTax="Rs.",str('%.2f'% PayTax)
